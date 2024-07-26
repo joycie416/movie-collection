@@ -212,18 +212,21 @@ header .container button {
   /* 고정된 크기의 text 상자에 스크롤 넣기 */
   overflow: scroll;
 }
-.card-hover:hover{
+
+
+
+.card-set:hover .card-hover{
   background-color: rgba(0, 0, 0, 0.523);
   box-shadow: 0 0 10px gray;
 }
 
-.card-hover:hover .card-title {
+.card-set:hover .card-hover .card-title {
   color:white;
 }
-.card-hover:hover .card-text {
+.card-set:hover .card-hover .card-text {
   color:white;
 }
-.card:hover .card-title {
+.card-set:hover .card .card-title {
   color: transparent;
 }
 
