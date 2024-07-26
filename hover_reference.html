@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 출처 : https://amina.co.kr/bbs/board.php?bo_table=tip&wr_id=5996 -->
+</head>
+
+<body>
+  <style>
+    body {
+      margin: 0
+    }
+
+    figure {
+      transition: opacity 0.2s;
+      position: relative;
+      margin: 0;
+      max-width: 20%
+    }
+
+    figure img {
+      width: 100%
+    }
+
+    figure figcaption {
+      color: #fff;
+      bottom: 70px;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      /* transition: all .3s ease; */
+    }
+
+    figure .gallery-img {
+      opacity: 1;
+      transition: all 0.3s ease 0s;
+      overflow: hidden
+    }
+
+    figure:hover .gallery-img {
+      background-color: #000
+    }
+
+    figure:hover img {
+      transform: scale(1.1, 1.1);
+      transition: all .3s ease;
+      opacity: 0.15;
+      cursor: url("https://hcode.b-cdn.net/wp-content/themes/h-code/assets/images/icon-zoom-white.png"), pointer
+    }
+
+    figure:hover figcaption {
+      opacity: 1;
+      transition: all .3s ease;
+    }
+  </style>
+
+
+
+  <figure>
+
+    <div class="gallery-img">
+      <img src="https://hcode.themezaa.com/wp-content/uploads/2015/09/portfolio-img16.jpg.webp">
+    </div>
+
+    <figcaption>
+
+      <h3>Tailoring Interior</h3>
+
+      <p>Ajax popup - Style #2</p>
+
+    </figcaption>
+
+  </figure>
+</body>
+
+</html>

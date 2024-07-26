@@ -15,7 +15,7 @@ fetch(url, options)
   .then(response => {
     
     data = response.results;
-    console.log(data);
+    // console.log(data);
 
     const cardSection = document.querySelector('.row');
 
@@ -27,10 +27,21 @@ fetch(url, options)
 
       cardSection.insertAdjacentHTML('beforeend', `
         <div class="col" id="movie-card">
-          <div class="card h-100">
-            <img src="${poster_path}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">${title}</h5>
+          <div class="card-set">
+            <div class="card h-100">
+              <img src="${poster_path}" class="card-img-top"
+                alt="example">
+              <!-- <div class="card-body"> -->
+
+              <div class="card-title">
+                <h5>${title}</h5>
+              </div>
+            </div>
+            <div class="card-hover">
+              <div class="card-title">
+                <h5>${title}</h5>
+              </div>
+
               <p class="card-text">${overview}</p>
             </div>
           </div>
@@ -69,7 +80,7 @@ async function searchMovie(val) {
             <img src="${poster_path}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">${title}</h5>
-              <p class="card-text">${overview}</p>
+              <!-- <p class="card-text">${overview}</p> -->
             </div>
           </div>
         </div>`);
@@ -91,3 +102,6 @@ searchBtn.addEventListener('click', (event)=> {
   console.log(val)
   searchMovie(val);
 })
+
+
+// ==============================================================
