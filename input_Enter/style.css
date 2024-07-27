@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
+body {
+  background-color: black;
+}
+
+/* header */
+header {
+  width: 100%;;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* 상단 고정 */
+  position: fixed;
+  top: 0;
+  z-index:1;
+
+}
+header .header {
+  width: 100%;
+  height: 60%;
+  margin: 0 auto;
+
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Pacifico", sans-serif;
+  color: white;
+}
+
+header .search {
+  width: 100%;
+  height: 40%;
+  background-color: rgb(65, 65, 65);
+  border-bottom: 1px solid black;
+
+  margin: auto;
+
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* header .search {
+  display: flex;
+  flex-direction: row;
+} */
+header .search label {
+  font-size: larger;
+  color: white;
+}
+header .search input {
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+header .search button {
+  text-align: center;
+  padding-bottom: 2px;
+
+  border-radius: 3px;
+}
+/* header .container {
+  display: flex;
+  flex-direction: row;
+}
+header .container #labelGetMovie {
+  font-size: larger;
+}
+header .container #getMovie {
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header .container button {
+  text-align: center;
+} */
+
+
+
+
+
+/* main */
+.main {
+  width: 100%;
+  /* margin-top: 20px; */
+  /* padding-left: 5%;
+  padding-right: 5%; */
+  margin-top: 135px; /* 기존 15px + 헤더 높이 120px*/
+  margin-bottom: 80px;
+
+  font-family: "Noto Sans", sans-serif;
+}
+
+.mycards {
+  /* 전체 폭 맞춰주기 */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mycards .row { 
+  /* 기존에 이상한 margin과 padding이 존재해 삭제 */
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.mycards .col {
+  width: 300px;
+  height: 518px;
+
+  /* 의미없는 margin, padding 제거 */
+  padding: 0;
+  margin: 15px; /* 이상한 margin 조정 및 적절한 간격 조정*/
+
+}
+
+
+.card-set {
+  position: relative; /*.card hover를 위함*/
+
+  width: 300px;
+  height: 518px;
+
+  margin: auto;
+}
+
+
+
+.card {
+  width: 300px;
+  /* height: 720px; */
+
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  border-radius: 15px;
+  background-color: rgb(65, 65, 65);
+  border: none;
+  color: black;
+
+  margin: 0 auto;
+  /* padding-top: 20px; */
+
+}
+
+
+.card-img-top {
+  object-fit: cover;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+.card-title {
+  margin: auto;
+}
+.card-title h5 {
+  text-align: center;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0px;
+
+  background-color: transparent;
+
+  width: 300px;
+  height: 518px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
+  border-radius: 15px;
+  border: none;
+  color: black;
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.card-hover .card-title {
+  color: transparent;
+}
+.card-hover .card-text {
+  width: 100%;
+  height: 430px;
+
+  text-align: justify;
+
+  color: transparent;
+  padding: 20px 0;
+
+  /* 고정된 크기의 text 상자에 스크롤 넣기 */
+  overflow: scroll;
+}
+
+
+
+.card-set:hover .card-hover{
+  background-color: rgba(0, 0, 0, 0.523);
+  box-shadow: 0 0 10px gray;
+}
+
+.card-set:hover .card-hover .card-title {
+  color:white;
+}
+.card-set:hover .card-hover .card-text {
+  color:white;
+}
+.card-set:hover .card .card-title {
+  color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: grey;
+
+  /* justify-content: center; */
+  text-align: center;
+}
