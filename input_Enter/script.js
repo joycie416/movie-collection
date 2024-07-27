@@ -4,7 +4,7 @@ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMzAxZjllMDM3NGQzOTRjN2QzNGQ1OWQxMTBlM2IxZCIsIm5iZiI6MTcyMjA2MzU2My45NDM2MjYsInN1YiI6IjY2YTBmNGI1YWU5YWQwMjU2ODBiZWFkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ws790m-zDA2Uf26kBBkDRhBhiaXXRa-mEtlAtB7xqdc'
+    Authorization: ''
   }
 };
 
@@ -74,7 +74,8 @@ async function searchMovie(val) {
       let poster_path = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
       // let score = movie.vote_average;
 
-      cardSection.insertAdjacentHTML('beforeend', `<div class="col" id="movie-card">
+      cardSection.insertAdjacentHTML('beforeend', `
+        <div class="col" id="movie-card">
           <div class="card-set">
             <div class="card h-100">
               <img src="${poster_path}" class="card-img-top"
@@ -116,6 +117,7 @@ searchBtn.addEventListener('click', (event)=> {
 
 // ==============================================================
 
+// input에서 엔터키 누르면 검색 버튼 누른 것과 동일하게 작동
 searchInput.addEventListener('keyup', (event)=> {
   if (event.key === 'Enter') {
     event.preventDefault();
@@ -123,5 +125,4 @@ searchInput.addEventListener('keyup', (event)=> {
   console.log(val)
   searchMovie(val);
   }
-  
 })
