@@ -74,13 +74,23 @@ async function searchMovie(val) {
       let poster_path = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
       // let score = movie.vote_average;
 
-      cardSection.insertAdjacentHTML('beforeend', `
-        <div class="col" id="movie-card">
-          <div class="card h-100">
-            <img src="${poster_path}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">${title}</h5>
-              <!-- <p class="card-text">${overview}</p> -->
+      cardSection.insertAdjacentHTML('beforeend', `<div class="col" id="movie-card">
+          <div class="card-set">
+            <div class="card h-100">
+              <img src="${poster_path}" class="card-img-top"
+                alt="example">
+              <!-- <div class="card-body"> -->
+
+              <div class="card-title">
+                <h5>${title}</h5>
+              </div>
+            </div>
+            <div class="card-hover">
+              <div class="card-title">
+                <h5>${title}</h5>
+              </div>
+
+              <p class="card-text">${overview}</p>
             </div>
           </div>
         </div>`);
